@@ -78,6 +78,7 @@ class BackendController extends ControllerBase
          */
         $module = isset($params[0]) ? $params[0] : 'backend';
         $controller = isset($params[1]) ? $params[1] : 'index';
+        // dd($params);s
         self::$action = $action = isset($params[2]) ? $this->parseAction($params[2]) : 'index';
         self::$params = $controllerParams = array_slice($params, 3);
         $controllerClass = '\\'.$module.'\Controllers\\'.$controller;

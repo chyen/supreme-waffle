@@ -1,4 +1,13 @@
-description = "Default"
+description = "wlasciwy widok strony"
+
+[googleMap googleMap2]
+latitude = 53.083412
+longitude = 21.567215
+zoom = 18
+width = "100%"
+height = "350px"
+mapTypeId = "ROADMAP"
+showMarker = "true"
 ==
 <!DOCTYPE html>
 
@@ -11,12 +20,12 @@ description = "Default"
     <meta name="description" content="">
     <meta name="author" content="jacoweb">
 
-    <title>Freelance-Theme</title>
+    <title>Kancelaria Adwokacka Pawelczyk</title>
 
         {% styles %}
 
     <link href="{{ [
-		'assets/css/bootstrap.min.css',
+		'assets/css/bootstrap.css',
 		'assets/css/theme.min.css'
     ]|theme }}" rel="stylesheet">
 
@@ -44,8 +53,7 @@ description = "Default"
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#page-top">Thiny Bits</a>
-                <div class=language>PL</div>
+                <a class="navbar-brand" href="#page-top"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -55,13 +63,13 @@ description = "Default"
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#portfolio">Portfolio</a>
+                        <a href="#about">O nas</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">About</a>
+                        <a href="#localization">Lokalizacja</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#contact">Contact</a>
+                        <a href="#contact">Kontakt</a>
                     </li>
                 </ul>
 
@@ -76,20 +84,22 @@ description = "Default"
         {% partial "header" %}
     </header>
 
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio">
-        {% partial "portfolio" %}
-    </section>
-
     <!-- About Section -->
     <section class="success" id="about">
         {% partial "about" %}
+    </section>
+
+    <section id="localization">
+        {% partial "localization" %}
+        {% component "googleMap2" %}
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
         {% partial "contact" %}
     </section>
+
+
 
     <!-- Footer -->
     <footer class="text-center">
