@@ -1,5 +1,5 @@
 $(function() {
-
+  console.log('ZZZZZZ');
     $("input,textarea").jqBootstrapValidation({
         preventSubmit: true,
         submitError: function($form, event, errors) {
@@ -17,8 +17,9 @@ $(function() {
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
+            console.log(name, email, phone, message);
             $.ajax({
-                url: "././mail/contact_me.php",
+                url: "contact",
                 type: "POST",
                 data: {
                     name: name,
