@@ -8,7 +8,7 @@ App::before(function ($request) {
      * Extensibility
      */
     Event::fire('backend.beforeRoute');
-// dd(1);
+
     /*
      * Other pages
      */
